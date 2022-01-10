@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: **|** Vous n'avez pas la permission !")
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: **|** You dont have permission to use this command!")
     let guildData = await client.data.getGuildDB(message.member.guild.id)
 
     switch (args[0]) {

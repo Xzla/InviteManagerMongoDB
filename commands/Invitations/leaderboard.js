@@ -3,7 +3,7 @@ const Discord = require("discord.js")
 module.exports.run = async (client, message, args) => {
 
     let leaderboardData = await client.data.getLeaderboard(message.member.guild.id)
-    if (!leaderboardData || (leaderboardData === undefined)) return message.channel.send(`:x: **|** Impossible de charger le leaderboard sur ${message.member.guild.name}. Veuillez reessayer plus tard ...`)
+    if (!leaderboardData || (leaderboardData === undefined)) return message.channel.send(`:x: **|** Failed to load leaderboard on ${message.member.guild.name}. Please try again later ...`)
 
     let usernameArray = []
     for (const user of leaderboardData) {
@@ -19,16 +19,16 @@ module.exports.run = async (client, message, args) => {
 
     message.channel.send(new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .setTitle('Leaderboard de ' + message.guild.name)
-        .setDescription(`Classement du serveur ${message.member.guild.name}
+        .setTitle(message.guild.name+ ' Invite Leaderboard')
+        .setDescription(`Rankings of ${message.member.guild.name}
         
-:white_check_mark: Invitations réelles
-:infinity: Toutes invitations comprises
-:sparkles: Invitations bonus
-:poop: Fausses invitations (compte trop récent)
-:x: Invités partis
+:white_check_mark: Confirmed Invites
+:infinity: Invites
+:sparkles: Bonus
+:poop: Fake
+:x: Left
 ${leaderboardArray}`)
         .setTimestamp()
-        .setFooter(`Demandé par ${message.member.user.tag}`)
+        .setFooter(`Requested by ${message.member.user.tag}`)
     )
 }

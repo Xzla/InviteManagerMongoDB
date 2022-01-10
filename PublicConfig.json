@@ -4,12 +4,12 @@
     "default": {
         "fake": 7,
         "join": {
-            "enabled": false,
-            "messageCorrect": "{member:mention} vient de rejoindre. Il a été invité par **{inviter:username}** qui a désormais **{invites} invitations** !",
-            "messageUnknown": "{member:mention} vient de rejoindre. Impossible de savoir par qui il a été invité !",
-            "messageBot": "{member:mention} vient de rejoindre via l'OAuth flow !",
-            "messageVanity": "{member:mention} vient de rejoindre via le lien officiel ! (**{code}**)",
-            "messageFake": "{member:mention} vient de rejoindre mais son compte est trop récent. Il a été invité par **{inviter:username}** !"
+            "enabled": true,
+            "messageCorrect": "{member:mention} Weclome to the server! *(invited by {inviter:username} who now has {invites} invites)*",
+            "messageUnknown": "{member:mention} Weclome to the server! *(inviter unknown)*",
+            "messageBot": "{member:mention} Weclome to the server! *(joined via O'Auth)*",
+            "messageVanity": "{member:mention} Weclome to the server! *(joined via vanity link {code})*",
+            "messageFake": "{member:mention}Weclome to the server! *(account too new to count invite)*"
         },
         "leave": {
             "enabled": false,

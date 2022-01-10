@@ -7,16 +7,16 @@ module.exports.run = async (client, message, args) => {
 
         return message.channel.send(new Discord.MessageEmbed()
             .setColor('RANDOM')
-            .setTitle("Invitations de " + message.member.user.tag)
+            .setTitle(message.member.user.tag+"'s Invites")
             .setTimestamp()
             .setThumbnail(message.member.user.displayAvatarURL())
-            .setFooter(`Demandé par ${message.member.user.tag}`)
-            .setDescription(`:infinity: **${!userData ? 0 : userData.invites_join}** invités
-:x: **${!userData? 0 : userData.invites_left}** partis
-:poop: **${!userData ? 0 : userData.invites_invalid}** invalidées
-:sparkles: **${!userData ? 0 : userData.invites_bonus}** bonus
+            .setFooter(`Requested by ${message.member.user.tag}`)
+            .setDescription(`:infinity: **${!userData ? 0 : userData.invites_join}** Invites
+:x: **${!userData? 0 : userData.invites_left}** Left
+:poop: **${!userData ? 0 : userData.invites_invalid}** Fake
+:sparkles: **${!userData ? 0 : userData.invites_bonus}** Bonus
 
-:white_check_mark: Vous avez actuellement **${!userData ? 0 : userData.invites}** invitations ! :clap:`)
+:white_check_mark: You have **${!userData ? 0 : userData.invites}** invites ! :clap:`)
         )
     }
 
@@ -25,16 +25,16 @@ module.exports.run = async (client, message, args) => {
 
     return message.channel.send(new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .setTitle("Invitations de " + userTargeted.tag)
+        .setTitle("Invites of " + userTargeted.tag)
         .setTimestamp()
         .setThumbnail(userTargeted.displayAvatarURL())
-        .setFooter(`Demandé par ${message.member.user.tag}`)
-        .setDescription(`:infinity: **${!userData ? 0 : userData.invites_join}** invités
-:x: **${!userData ? 0 : userData.invites_left}** partis
-:poop: **${!userData ? 0 :userData.invites_invalid}** invalidées
-:sparkles: **${!userData ? 0 : userData.invites_bonus}** bonus
+        .setFooter(`Requested by ${message.member.user.tag}`)
+        .setDescription(`:infinity: **${!userData ? 0 : userData.invites_join}** Invites
+:x: **${!userData ? 0 : userData.invites_left}** Left
+:poop: **${!userData ? 0 :userData.invites_invalid}** Fake
+:sparkles: **${!userData ? 0 : userData.invites_bonus}** Bonus
 
-:white_check_mark: Vous avez actuellement **${!userData ? 0 : userData.invites}** invitations ! :clap:`)
+:white_check_mark: They have **${!userData ? 0 : userData.invites}** invites! :clap:`)
     )
 
 }

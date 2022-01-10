@@ -1,3 +1,10 @@
+
+##English Translation by Xzla
+
+Old project readme below 
+
+
+
 <h1 align="center">InviteManager MongoDB</h1>
 
 <p align="center">
